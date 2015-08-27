@@ -1,0 +1,191 @@
+/* --------------------------------------
+Typography
+-------------------------------------- */
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    height: 100%;
+}
+
+
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+.navbar-form {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#searchInput {
+    width: 400px;
+}
+
+.navbar-brand {
+    padding: 13px 15px;
+}
+
+#topNavbar {
+    background-color: #00BFFF;
+}
+
+#topNavbar a {
+    color: #222;
+}
+
+.badge {
+    background: #fff;
+    color: #080808;
+}
+
+/* --------------------------------------
+  Layout
+   -------------------------------------- */
+
+.wrapBody {
+    margin-top: 70px;
+}
+
+/* -----------------------------------
+    Fixed Footer
+    ------------------------------------- */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 190px;
+}
+
+footer {
+    background: #333;
+    color: #eee;
+    font-size: 11px;
+    padding: 20px;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 170px;
+}
+
+
+/*-------------------------------------------------------
+             Thumbnail
+             -------------------------------------------*/
+
+ul.thumbnails {
+    list-style: none;
+    padding: 0;
+}
+
+.thumbnail {
+    position: relative;
+    margin: 10px 0;
+}
+
+.thumbnail > img {
+    padding: 5px;
+}
+
+.thumbnail .price {
+    font-size: 16px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 10px;
+}
+
+.thumbnail .price sup {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.thumbnail span.glyphicon {
+    margin-right: 5px;
+}
+
+/*.thumbnail.right-caption > img {
+    float: right;
+    margin-left: 9px;
+    padding: 5px;
+}
+
+.thumbnail.right-caption {
+    float: right;
+}
+
+.thumbnail.right-caption > .caption {
+    padding: 4px;
+}*/
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+
+    .thumbnail .price {
+        font-size: 14px;
+    }
+
+    .thumbnail .price sup {
+        font-size: 10px;
+    }
+
+    #searchInput {
+        width: 150px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    #logo {
+        display: none;
+    }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+    footer {
+        display: none;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #searchInput {
+        width: 150px;
+    }
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+
+
+}
+
+.hideOverflow
+{
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    width:100%;
+    display:block;
+}
+
+img {
+    margin: 5px;
+}
+
