@@ -4,23 +4,26 @@
 
 <div class="row">
 
-  <div class="col-4">
-    <img src="http://placehold.it/300x200">
+  <div class="col-1"></div>
+
+  <div class="col-3">
+    <img src="/image/${book.image.id}" height="300" width="250">
 
   </div>
 
   <div class="col-3">
-    <h5 class="well well-sm"><strong>Название:</strong> Олька без ума от Вити</h5>
-    <h5 class="well well-sm"><strong>Автор:</strong> Ольга Сологуб</h5>
-    <h5 class="well well-sm"><strong>Издательство:</strong> Книги с Привокзальной</h5>
-
-
+    <h5 class="well well-sm"><strong>Название:</strong> ${book.name}</h5>
+    <h5 class="well well-sm"><strong>Автор:</strong> ${book.author}</h5>
+    <h5 class="well well-sm"><strong>Издательство:</strong> ${book.publisher}</h5>
+    <h5 class="well well-sm"><strong>Год издания:</strong> ${book.publishYear}</h5>
+    
   </div>
 
   <div class="col-3">
-    <h5 class="well well-sm"><strong>Переплет:</strong> Твердый</h5>
-    <h5 class="well well-sm"><strong>Год издания:</strong> 2015</h5>
-    <h5 class="well well-sm"><strong>Цена:</strong> 150000</h5>
+    <h5 class="well well-sm"><strong>ISBN:</strong> ${book.isbn}</h5>
+    <h5 class="well well-sm"><strong>Жанр:</strong> ${book.genre}</h5>
+    <h5 class="well well-sm"><strong>Переплет:</strong> ${book.cover}</h5>
+    <h5 class="well well-sm"><strong>Цена:</strong> ${book.price}</h5>
   </div>
 
 
@@ -29,6 +32,8 @@
 <br />
 
 <div class="row">
+
+  <div class="col-1"></div>
 
   <div class="col-2" >
 
@@ -39,17 +44,9 @@
 
   </div>
 
-  <div class="col-offset-3 well">
+  <div class="col-7 well">
     <p>
-      Lorem ipsum dolor sit amet, sit maecenas pellentesque tempus amet arcu cras.
-      Ut lectus ac interdum, nunc neque, egestas et, lobortis urna vel ut tempor dui, a vivamus ut
-      morbi.
-      Taciti sapien, senectus suscipit eros molestie tincidunt assumenda mauris, augue enim rutrum
-      nisl amet
-      harum, lectus at morbi nulla nam rhoncus, et dolor tellus scelerisque lacus mi.
-      Rutrum amet vel, massa ut id dolor ipsum diam, non lacus vestibulum ut morbi.
-      Condimentum nulla maecenas maecenas odio urna, a hic ac tincidunt ad egestas turpis,
-      nunc molestie eget ultrices neque.
+      ${book.longDesc}
     </p>
   </div>
 </div>

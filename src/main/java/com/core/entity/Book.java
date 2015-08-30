@@ -30,8 +30,9 @@ public class Book {
 
     private String publishYear;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    private List<String> genres;
+    private String genre;
+
+    private String cover;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
@@ -111,12 +112,12 @@ public class Book {
         this.publishYear = publishYear;
     }
 
-    public List<String> getGenres() {
-        return genres;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGenres(List<String> genres) {
-        this.genres = genres;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public Category getCategory() {
@@ -157,5 +158,13 @@ public class Book {
 
     public void setImage(Image image) {
         this.image = image;
+    }
+
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
     }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE tiles-definitions PUBLIC
         "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
@@ -8,21 +8,29 @@
     </definition>
 
     <definition name="index" extends="common">
-        <put-attribute name="title" value="SoloBook" />
+        <put-attribute name="title" value="SoloShop" />
         <put-attribute name="body" value="/WEB-INF/pages/index.jsp" />
         <put-attribute name="current" value="index" />
     </definition>
 
     <definition name="book" extends="common">
-        <put-attribute name="title" value="SoloBook" />
+        <put-attribute name="title" value="SoloShop" />
         <put-attribute name="body" value="/WEB-INF/pages/book.jsp" />
         <put-attribute name="current" value="book" />
     </definition>
 
     <definition name="login" extends="common">
-        <put-attribute name="title" value="SoloBook" />
+        <put-attribute name="title" value="Логин" />
         <put-attribute name="body" value="/WEB-INF/pages/login.jsp" />
         <put-attribute name="current" value="login" />
     </definition>
+
+    <!-- Admin Pages -->
+    <definition name="addbook" extends="common">
+        <put-attribute name="title" value="Добавить книгу" />
+        <put-attribute name="body" value="/WEB-INF/pages/admin/addbook.jsp" />
+        <put-attribute name="current" value="addbook" />
+    </definition>
+
 
 </tiles-definitions>

@@ -44,7 +44,7 @@ body {
    -------------------------------------- */
 
 .wrapBody {
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 /* -----------------------------------
@@ -88,8 +88,14 @@ ul.thumbnails {
     margin: 10px 0;
 }
 
+#desc {
+    text-align: justify;
+    min-height: 70px;
+}
+
 .thumbnail > img {
     padding: 5px;
+
 }
 
 .thumbnail .price {
@@ -150,6 +156,7 @@ ul.thumbnails {
         display: none;
     }
 
+
 }
 
 /* Landscape phone to portrait tablet */
@@ -166,6 +173,7 @@ ul.thumbnails {
     #searchInput {
         width: 150px;
     }
+
 
 }
 

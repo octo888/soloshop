@@ -18,7 +18,6 @@
     <script src="${pageContext.request.contextPath}/resources/includes/js/modernizr-2.6.2.min.js"></script>
 
 
-
     <!-- Mobile viewport optimized -->
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -43,8 +42,9 @@
                     class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="index.html" id="logo"><img class="img-responsive"
-                    src="${pageContext.request.contextPath}/resources/images/logo.png" alt="Your Logo"></a>
+            <a class="navbar-brand" href="/index" id="logo"><img class="img-responsive"
+                                                                     src="${pageContext.request.contextPath}/resources/images/logo.png"
+                                                                     alt="Your Logo"></a>
 
             <form role="search" class="navbar-form pull-left searchForm" action="/search.html" method="post">
                 <input type="text" name="pattern" class="form-control"
@@ -60,7 +60,20 @@
 
                 <ul class="nav navbar-nav pull-right">
 
-                    <li ><a
+                    <security:authorize access="hasRole('ROLE_ADMIN')">
+
+                        <li class="dropdown"><a href="#" class="dropdown-toggle"
+                                                data-toggle="dropdown">АдминПанель<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+
+                                <li class="${current == 'addbook' ? 'active' : '' }">
+                                    <a href="<spring:url value="/admin/addbook.html" />">Добавить книгу</a></li>
+
+                            </ul>
+                        </li>
+                    </security:authorize>
+
+                    <li><a
                             href="<spring:url value="/index.html"/>">Главная</a></li>
 
                     <li><a href="#">
@@ -68,12 +81,15 @@
                         <span class="badge">0</span></a>
                     </li>
 
-                    <li><a href="<spring:url value="/login">
+                    <security:authorize access="! isAuthenticated()">
+                        <li><a href="<spring:url value="/login">
                                 </spring:url>">Войти</a></li>
+                        <li><a href="<spring:url value="/register.html">
+                                </spring:url>">Регистрация</a></li>
+                    </security:authorize>
 
                     <security:authorize access="isAuthenticated()">
-                    <li><a href="<spring:url value="/blogs.html">
-                                </spring:url>">Регистрация</a></li>
+                        <li><a href="<spring:url value="/logout" />">Выйти</a></li>
                     </security:authorize>
 
                 </ul>
