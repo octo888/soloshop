@@ -46,16 +46,16 @@ public class SpringDataConfig {
         return transactionManager;
     }
 
-    @Bean
+    /*@Bean
     public DataSource dataSource() {
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setJdbcUrl("jdbc:hsqldb:mem:test");
         dataSource.setUsername("admin");
         dataSource.setPassword("");
         return dataSource;
-    }
+    }*/
 
-    /*@Bean
+   /* @Bean
     public DataSource dataSource() throws URISyntaxException {
 
         URI dbUri = new URI(System.getenv("DATABASE_URL"));
@@ -70,5 +70,14 @@ public class SpringDataConfig {
         dataSource.setPassword(password);
         return dataSource;
     }*/
+
+    @Bean
+    public DataSource dataSource() {
+        HikariDataSource dataSource = new HikariDataSource();
+        dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/shopdb");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("admin");
+        return dataSource;
+    }
 
 }

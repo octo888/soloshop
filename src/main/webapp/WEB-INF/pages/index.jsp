@@ -4,15 +4,15 @@
 
 <div class="row">
 
-    <div class="col-1"></div>
-    <div class="col-sm-10">
+    <%--<div class="col-1"></div>--%>
+    <div class="col-sm-12">
         <ul class="thumbnails">
 
             <c:forEach items="${books}" var="book">
-                <li class="col-4" >
+                <li class="col-3" >
                     <div class="thumbnail">
                         <a href="/book/${book.id}" >
-                            <img  src="/image/${book.image.id}" height="300" width="200"
+                            <img  src="/image/${book.image.id}" height="200" width="150"
                                  align="center">
                         </a>
 
@@ -25,7 +25,7 @@
                             <p id="desc" >${book.shortDesc}</p>
 
                             <p class="hideOverflow"><a href="/book/${book.id}" class="btn btn-primary" role="button">Купить</a>
-                                <a href="/book/${book.id}" class="btn btn-success" role="button">В корзину</a>
+                                <a href="/${book.id}/addToCart" class="btn btn-success" role="button">В корзину</a>
                                 <a href="/book/${book.id}" class="btn btn-small btn-link" role="button">Подробнее..</a></p>
                         </div>
                     </div>
@@ -33,5 +33,5 @@
             </c:forEach>
         </ul>
     </div>
-    <div class="col-1"></div>
+    <%--<div class="col-1"></div>--%>
 </div>

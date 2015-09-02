@@ -50,4 +50,8 @@ public class BookService {
     public Book findOneById(long id) {
         return bookRepository.findOne(id);
     }
+
+    public void delete(Long id) {
+        bookRepository.delete(id);
+    }
 }

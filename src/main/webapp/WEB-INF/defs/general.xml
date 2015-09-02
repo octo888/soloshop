@@ -25,6 +25,12 @@
         <put-attribute name="current" value="login" />
     </definition>
 
+    <definition name="cart" extends="common">
+        <put-attribute name="title" value="Корзина" />
+        <put-attribute name="body" value="/WEB-INF/pages/cart.jsp" />
+        <put-attribute name="current" value="cart" />
+    </definition>
+
     <!-- Admin Pages -->
     <definition name="addbook" extends="common">
         <put-attribute name="title" value="Добавить книгу" />

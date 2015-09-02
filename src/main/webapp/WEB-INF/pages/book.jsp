@@ -41,6 +41,7 @@
 
 
     <p><a href="#" class="btn btn-success btn-lg" role="button">В корзину</a></p>
+    <p><a href="/admin/delete/book/${book.id}" class="btn btn-danger btn-lg" role="button">Удалить</a></p>
 
   </div>
 

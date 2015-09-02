@@ -25,8 +25,6 @@ public class User {
     @JoinTable
     private List<Role> roles;
 
-    @OneToMany(mappedBy = "user")
-    private List<Cart> orders;
 
     public Long getId() {
         return id;
@@ -84,11 +82,4 @@ public class User {
         this.roles = roles;
     }
 
-    public List<Cart> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Cart> orders) {
-        this.orders = orders;
-    }
 }

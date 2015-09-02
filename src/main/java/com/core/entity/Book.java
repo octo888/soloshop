@@ -11,7 +11,7 @@ public class Book {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private long id;
 
     private String name;
 
@@ -166,5 +166,19 @@ public class Book {
 
     public void setCover(String cover) {
         this.cover = cover;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!(other instanceof Book)) {
+            return false;
+        }
+        Book otherBook = (Book) other;
+        return this.id == otherBook.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

@@ -54,8 +54,10 @@ public class BookController {
             book.setName(name);
             book.setAuthor(author);
             book.setCategory(bookService.findCategoryByName("Книги"));
-            book.setLongDesc(description);
-            book.setShortDesc(description.substring(0, 70) + "...");
+            if (description != null) {
+                book.setLongDesc(description);
+                book.setShortDesc(description.substring(0, 70) + "...");
+            }
             book.setPublisher(publisher);
             book.setPublishYear(publishYear);
             book.setIsbn(isbn);
@@ -84,5 +86,11 @@ public class BookController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @RequestMapping("/admin/delete/book/{id}")
+    public String deleteBook(@PathVariable Long id) {
+        bookService.delete(id);
+        return "redirect:/index";
     }
 }

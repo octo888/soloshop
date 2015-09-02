@@ -42,7 +42,7 @@
                     class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="/index" id="logo"><img class="img-responsive"
+            <a class="navbar-brand" href="/" id="logo"><img class="img-responsive"
                                                                      src="${pageContext.request.contextPath}/resources/images/logo.png"
                                                                      alt="Your Logo"></a>
 
@@ -74,11 +74,11 @@
                     </security:authorize>
 
                     <li><a
-                            href="<spring:url value="/index.html"/>">Главная</a></li>
+                            href="<spring:url value="/"/>">Главная</a></li>
 
-                    <li><a href="#">
+                    <li><a href="/cart" >
                         <span class="glyphicon glyphicon-shopping-cart"></span><strong>Корзина</strong>
-                        <span class="badge">0</span></a>
+                        <span class="badge">${cartItemsNum}</span></a>
                     </li>
 
                     <security:authorize access="! isAuthenticated()">

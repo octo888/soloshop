@@ -1,10 +1,15 @@
 package com;
 
+import com.core.beans.Cart;
+import com.core.entity.Book;
 import org.springframework.context.annotation.*;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Configuration
 @ComponentScan
@@ -23,5 +28,10 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         resolver.setDefaultEncoding("utf-8");
         return resolver;
     }
+
+    /*@Bean
+    public Cart cart() {
+        return new Cart();
+    }*/
 
 }

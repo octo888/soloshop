@@ -13,12 +13,13 @@ public class IndexController {
     private BookService bookService;
 
     @RequestMapping("/")
-    public String index() {
+    public String main(Model model) {
+        model.addAttribute("books", bookService.findAll());
         return "index";
     }
 
     @RequestMapping("/index")
-    public String indexHome(Model model) {
+    public String index(Model model) {
         model.addAttribute("books", bookService.findAll());
         return "index";
     }
