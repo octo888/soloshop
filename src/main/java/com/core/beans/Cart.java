@@ -22,12 +22,15 @@ public class Cart {
     }
 
 
-    public Double totalSum() {
-        double sum = 0;
+    public Integer totalSum() {
+        int sum = 0;
         for (Book book : this.items) {
             sum += book.getPrice();
         }
         return sum;
     }
 
+    public void clean() {
+        this.items = null;
+    }
 }

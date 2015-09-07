@@ -51,7 +51,7 @@ public class InitDBService {
             userRepository.save(userAdmin);
 
             Category books = new Category();
-            books.setName("Книги");
+            books.setName("book");
             categoryRepository.save(books);
 
         }

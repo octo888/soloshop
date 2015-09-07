@@ -24,7 +24,7 @@
 
                             <p id="desc" >${book.shortDesc}</p>
 
-                            <p class="hideOverflow"><a href="/book/${book.id}" class="btn btn-primary" role="button">Купить</a>
+                            <p class="hideOverflow"><a href="/${book.id}/addToCart" class="btn btn-primary" role="button">Купить</a>
                                 <a href="/${book.id}/addToCart" class="btn btn-success" role="button">В корзину</a>
                                 <a href="/book/${book.id}" class="btn btn-small btn-link" role="button">Подробнее..</a></p>
                         </div>

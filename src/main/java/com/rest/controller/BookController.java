@@ -53,7 +53,7 @@ public class BookController {
             Book book = new Book();
             book.setName(name);
             book.setAuthor(author);
-            book.setCategory(bookService.findCategoryByName("Книги"));
+            book.setCategory("book");
             if (description != null) {
                 book.setLongDesc(description);
                 book.setShortDesc(description.substring(0, 70) + "...");

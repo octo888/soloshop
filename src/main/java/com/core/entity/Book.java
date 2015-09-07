@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-public class Book {
+public class Book extends Product{
 
     @Id
     @GeneratedValue
@@ -34,9 +34,7 @@ public class Book {
 
     private String cover;
 
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
+    private String category;
 
     private Integer price;
 
@@ -120,11 +118,11 @@ public class Book {
         this.genre = genre;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 

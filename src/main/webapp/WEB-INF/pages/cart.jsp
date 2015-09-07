@@ -9,7 +9,6 @@
             <th>Номер</th>
             <th>Цена</th>
             <th>Действие</th>
-            <th>Действие</th>
         </tr>
         </thead>
         <tbody>
@@ -24,10 +23,6 @@
                 </td>
 
                 <td>
-                    <a href="" class="btn btn-primary">Оформить</a>
-                </td>
-
-                <td>
                     <a href='<spring:url value="/cart/remove/${item.id}"  />'
                         class="btn btn-danger triggerRemove">
                         Удалить </a>
@@ -38,5 +33,6 @@
         </c:forEach>
         </tbody>
     </table>
-<h4><strong>Итого:</strong> ${sum} грн.</h4>
+<h4 class="pull-right"><strong>Итого:</strong> ${sum} грн.</h4>
+<a href="/order" class="btn btn-primary">Оформить</a>
 
